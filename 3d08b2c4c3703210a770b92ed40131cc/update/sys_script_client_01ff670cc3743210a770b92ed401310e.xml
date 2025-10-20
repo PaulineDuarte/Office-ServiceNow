@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Teste para evitar que  o mesmo gerente de base seja vinculado a mais de duas bases</description>
+        <field/>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>Exclusive manager</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+    
+    // 1. Rodar a validação APENAS se o campo for novo ou tiver mudado
+    // (Use o nome correto do seu campo 'manager_base' aqui)
+    if (g_form.isNewRecord() || g_form.isFieldModified('manager_base')) { 
+        
+        // 2. Use o API Name CORRETO que você encontrou antes
+        var ga = new GlideAjax('x_1836079_office.BaseUtils');
+        
+        // 3. Mude de volta para 'checkDuplicateManager' (você pode apagar o 'pingTest' do Script Include)
+        ga.addParam('sysparm_name', 'checkDuplicateManager'); 
+        
+        // 4. Adicione os parâmetros de volta
+        ga.addParam('sysparm_manager_sysid', g_form.getValue('manager_base')); // <-- SEU CAMPO
+        ga.addParam('sysparm_current_base_sysid', g_form.getUniqueValue());
+        
+        // 5. A GRANDE MUDANÇA: 
+        // Em vez de 'getXMLWait()', usamos 'getXML()' e dizemos qual função rodar quando a resposta chegar.
+        ga.getXML(validacaoCallback);
+
+        // 6. PARE o envio do formulário por enquanto. A função 'validacaoCallback' decidirá o que fazer.
+        return false; 
+    }
+    
+    // 7. Se o campo NÃO mudou, não há nada para verificar. Deixe salvar.
+    return true;
+}
+
+/**
+ * 8. Esta é a nova função de "Callback". 
+ * Ela roda QUANDO O SERVIDOR RESPONDER.
+ */
+function validacaoCallback(response) {
+    // 9. Pega a resposta ('true' ou 'false') do Script Include
+    var answer = response.responseXML.documentElement.getAttribute("answer");
+
+    if (answer === 'true') {
+        // 10. Se for duplicado, mostre o erro e NÃO FAÇA NADA.
+        // O formulário continua parado.
+        g_form.addErrorMessage('This manager is already assigned to another base. The submission has been canceled.');
+		g_form.setValue('manager_base','');
+    } else {
+        // 11. Se for válido (false), envie o formulário de verdade!
+        // g_form.submit() vai disparar o 'onSubmit' de novo, mas desta vez
+        // ele cairá no passo 7 (pois o campo não mudou) e salvará.
+        g_form.submit(g_form.getActionName());
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-20 17:18:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>01ff670cc3743210a770b92ed401310e</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Exclusive manager</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
+        <sys_update_name>sys_script_client_01ff670cc3743210a770b92ed401310e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-20 18:16:49</sys_updated_on>
+        <table>x_1836079_office_base</table>
+        <type>onSubmit</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

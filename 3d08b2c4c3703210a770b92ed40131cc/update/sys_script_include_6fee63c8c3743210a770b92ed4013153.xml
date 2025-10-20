@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1836079_office.BaseUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>BaseUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var BaseUtils = Class.create();
+BaseUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+   checkDuplicateManager: function() {
+        // Pega os parâmetros enviados pelo Client Script
+        var managerSysId = this.getParameter('sysparm_manager_sysid');
+        var currentBaseSysId = this.getParameter('sysparm_current_base_sysid');
+
+        // Se o campo gerente estiver vazio, não faz nada (é válido)
+        if (!managerSysId) {
+            return 'false';
+        }
+
+        // ATENÇÃO: Verifique se este é o nome da sua tabela 'Base'
+        var grBase = new GlideRecord('x_1836079_office_base'); 
+
+        // ATENÇÃO: Verifique se este é o nome do seu campo 'manager base'
+        grBase.addQuery('manager_base', managerSysId); 
+
+        // Ignora a base que estamos editando no momento
+        if (currentBaseSysId) {
+            grBase.addQuery('sys_id', '!=', currentBaseSysId);
+        }
+        grBase.query();
+
+        if (grBase.next()) {
+            return 'true'; // Encontrou duplicado!
+        } else {
+            return 'false'; // Não encontrou (é válido).
+        }
+    },
+
+    type: 'BaseUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-20 17:16:08</sys_created_on>
+        <sys_id>6fee63c8c3743210a770b92ed4013153</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>BaseUtils</sys_name>
+        <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
+        <sys_update_name>sys_script_include_6fee63c8c3743210a770b92ed4013153</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-20 18:26:18</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>6fee63c8c3743210a770b92ed4013153</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-20 17:16:07</sys_created_on>
+        <sys_id>82df23c8c3743210a770b92ed40131ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-20 17:16:07</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

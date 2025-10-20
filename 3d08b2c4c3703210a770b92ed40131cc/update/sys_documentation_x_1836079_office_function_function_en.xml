@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="function" label="Function" language="en" table="x_1836079_office_function">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>function</element>
+            <help/>
+            <hint/>
+            <label>Function</label>
+            <language>en</language>
+            <name>x_1836079_office_function</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-20 13:18:03</sys_created_on>
+            <sys_id>a659b248c3703210a770b92ed40131c7</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>Function</sys_name>
+            <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
+            <sys_update_name>sys_documentation_x_1836079_office_function_function_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-20 13:18:04</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

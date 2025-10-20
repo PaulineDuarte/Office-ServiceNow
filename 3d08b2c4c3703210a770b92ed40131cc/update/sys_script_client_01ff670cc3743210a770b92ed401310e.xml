@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
     <sys_script_client action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <applies_extended>false</applies_extended>
         <condition/>
         <description>Teste para evitar que  o mesmo gerente de base seja vinculado a mais de duas bases</description>
@@ -43,8 +43,13 @@
  * Ela roda QUANDO O SERVIDOR RESPONDER.
  */
 function validacaoCallback(response) {
+	// --- ALERTA DE DIAGNÓSTICO 1 ---
+    alert('CALLBACK DO GERENTE FOI ACIONADO!');
     // 9. Pega a resposta ('true' ou 'false') do Script Include
     var answer = response.responseXML.documentElement.getAttribute("answer");
+
+	// --- ALERTA DE DIAGNÓSTICO 2 ---
+    alert('O servidor (gerente) respondeu: ' + answer);
 
     if (answer === 'true') {
         // 10. Se for duplicado, mostre o erro e NÃO FAÇA NADA.
@@ -52,6 +57,8 @@ function validacaoCallback(response) {
         g_form.addErrorMessage('This manager is already assigned to another base. The submission has been canceled.');
 		g_form.setValue('manager_base','');
     } else {
+		// --- ALERTA DE DIAGNÓSTICO 3 ---
+        alert('VALIDO! Tentando submeter o formulario...');
         // 11. Se for válido (false), envie o formulário de verdade!
         // g_form.submit() vai disparar o 'onSubmit' de novo, mas desta vez
         // ele cairá no passo 7 (pois o campo não mudou) e salvará.
@@ -64,7 +71,7 @@ function validacaoCallback(response) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>01ff670cc3743210a770b92ed401310e</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Exclusive manager</sys_name>
         <sys_overrides/>
         <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
@@ -72,7 +79,7 @@ function validacaoCallback(response) {
         <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
         <sys_update_name>sys_script_client_01ff670cc3743210a770b92ed401310e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-20 18:16:49</sys_updated_on>
+        <sys_updated_on>2025-10-20 18:48:27</sys_updated_on>
         <table>x_1836079_office_base</table>
         <type>onSubmit</type>
         <ui_type>10</ui_type>

@@ -12,33 +12,61 @@
         <script><![CDATA[var BaseUtils = Class.create();
 BaseUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
-   checkDuplicateManager: function() {
-        // Pega os parâmetros enviados pelo Client Script
-        var managerSysId = this.getParameter('sysparm_manager_sysid');
-        var currentBaseSysId = this.getParameter('sysparm_current_base_sysid');
+    /**
+     * Esta é a nossa ÚNICA função de validação.
+     * Ela verifica todas as regras de duplicidade da tabela Base de uma só vez.
+     */
+    validateBaseSubmit: function() {
+        // Pegar todos os parâmetros do formulário
+		var managerSysId = this.getParameter('sysparm_manager_sysid');
+		var name = this.getParameter('sysparm_base_name'); // <-- ESTA É A LINHA QUE MUDAMOS
+		var city = this.getParameter('sysparm_city');
+		var state = this.getParameter('sysparm_state');
+		var currentSysId = this.getParameter('sysparm_current_base_sysid');
+        
+        // --- ATENÇÃO: Verifique os nomes da sua tabela e campos abaixo ---
+        var tableName = 'x_1836079_office_base'; // <-- NOME DA SUA TABELA BASE
+        var managerField = 'manager_base';        // <-- NOME DO CAMPO GERENTE
+        var nameField = 'name';                   // <-- NOME DO CAMPO NOME
+        var cityField = 'city';                   // <-- NOME DO CAMPO CIDADE
+        var stateField = 'state';                 // <-- NOME DO CAMPO ESTADO
 
-        // Se o campo gerente estiver vazio, não faz nada (é válido)
-        if (!managerSysId) {
-            return 'false';
+        // --- 1. Validação do Gerente (História 2) ---
+        if (managerSysId) {
+            var grManager = new GlideRecord(tableName); 
+            grManager.addQuery(managerField, managerSysId); 
+            if (currentSysId) grManager.addQuery('sys_id', '!=', currentSysId);
+            grManager.query();
+            if (grManager.next()) {
+                return 'ERR_DUPE_MANAGER'; // Erro: Gerente duplicado
+            }
         }
 
-        // ATENÇÃO: Verifique se este é o nome da sua tabela 'Base'
-        var grBase = new GlideRecord('x_1836079_office_base'); 
-
-        // ATENÇÃO: Verifique se este é o nome do seu campo 'manager base'
-        grBase.addQuery('manager_base', managerSysId); 
-
-        // Ignora a base que estamos editando no momento
-        if (currentBaseSysId) {
-            grBase.addQuery('sys_id', '!=', currentBaseSysId);
+        // --- 2. Validação do Nome (História 4a) ---
+        if (name) {
+            var grName = new GlideRecord(tableName);
+            grName.addQuery(nameField, name);
+            if (currentSysId) grName.addQuery('sys_id', '!=', currentSysId);
+            grName.query();
+            if (grName.next()) {
+                return 'ERR_DUPE_NAME'; // Erro: Nome duplicado
+            }
         }
-        grBase.query();
-
-        if (grBase.next()) {
-            return 'true'; // Encontrou duplicado!
-        } else {
-            return 'false'; // Não encontrou (é válido).
+        
+        // --- 3. Validação de Cidade+Estado (História 4b) ---
+        if (city && state) {
+            var grLocation = new GlideRecord(tableName);
+            grLocation.addQuery(cityField, city); 
+            grLocation.addQuery(stateField, state); 
+            if (currentSysId) grLocation.addQuery('sys_id', '!=', currentSysId);
+            grLocation.query();
+            if (grLocation.next()) {
+                return 'ERR_DUPE_LOCATION'; // Erro: Localização duplicada
+            }
         }
+
+        // --- 4. Se passou em tudo ---
+        return 'VALID'; // Resposta: Tudo OK!
     },
 
     type: 'BaseUtils'
@@ -47,14 +75,14 @@ BaseUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-20 17:16:08</sys_created_on>
         <sys_id>6fee63c8c3743210a770b92ed4013153</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>BaseUtils</sys_name>
         <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
         <sys_update_name>sys_script_include_6fee63c8c3743210a770b92ed4013153</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-20 18:26:18</sys_updated_on>
+        <sys_updated_on>2025-10-20 19:03:14</sys_updated_on>
     </sys_script_include>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>6fee63c8c3743210a770b92ed4013153</id>

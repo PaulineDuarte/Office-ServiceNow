@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="function" table="x_1836079_office_function">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="name_function" table="x_1836079_office_function">
         <active>true</active>
         <array>false</array>
         <attributes/>
@@ -8,7 +8,7 @@
         <choice>0</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>Function</column_label>
+        <column_label>Name Function</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -16,12 +16,12 @@
         <delete_roles/>
         <dependent/>
         <dependent_on_field/>
-        <display>false</display>
+        <display>true</display>
         <dynamic_creation>false</dynamic_creation>
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>function</element>
+        <element>name_function</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <formula/>
@@ -46,15 +46,15 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-20 13:18:03</sys_created_on>
-        <sys_id>a659b248c3703210a770b92ed40131c5</sys_id>
-        <sys_name>Function</sys_name>
+        <sys_created_on>2025-10-21 18:00:06</sys_created_on>
+        <sys_id>40834568c3b43210a770b92ed40131f7</sys_id>
+        <sys_name>Name Function</sys_name>
         <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
-        <sys_update_name>sys_dictionary_x_1836079_office_function_function</sys_update_name>
+        <sys_update_name>sys_dictionary_x_1836079_office_function_name_function</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-20 13:18:03</sys_updated_on>
+        <sys_updated_on>2025-10-21 18:01:37</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

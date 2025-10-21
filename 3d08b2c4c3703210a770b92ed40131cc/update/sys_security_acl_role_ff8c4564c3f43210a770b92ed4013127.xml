@@ -2,17 +2,17 @@
     <sys_security_acl_role action="INSERT_OR_UPDATE">
         <sys_class_name>sys_security_acl_role</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-20 17:16:08</sys_created_on>
-        <sys_id>dadfa30cc3743210a770b92ed40131b3</sys_id>
+        <sys_created_on>2025-10-21 18:40:21</sys_created_on>
+        <sys_id>ff8c4564c3f43210a770b92ed4013127</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>BaseUtils.admin</sys_name>
+        <sys_name>.x_1836079_office.user</sys_name>
         <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
-        <sys_security_acl display_value="BaseUtils">16dfa30cc3743210a770b92ed40131ae</sys_security_acl>
-        <sys_update_name>sys_security_acl_role_dadfa30cc3743210a770b92ed40131b3</sys_update_name>
+        <sys_security_acl display_value="x_1836079_office_function.name_function">be8c45e0c3f43210a770b92ed40131ef</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_ff8c4564c3f43210a770b92ed4013127</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-20 17:16:08</sys_updated_on>
-        <sys_user_role display_value="admin" name="admin">2831a114c611228501d4ea6c309d626d</sys_user_role>
+        <sys_updated_on>2025-10-21 18:40:21</sys_updated_on>
+        <sys_user_role display_value="x_1836079_office.user" name="x_1836079_office.user">f908b2c4c3703210a770b92ed40131df</sys_user_role>
     </sys_security_acl_role>
 </record_update>

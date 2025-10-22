@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_documentation element="capacity_count" label="Capacity count" language="en" table="x_1836079_office_base">
+    <sys_documentation element="reference_for" label="Reference for" language="en" table="x_1836079_office_registration">
         <sys_documentation action="INSERT_OR_UPDATE">
-            <element>capacity_count</element>
+            <element>reference_for</element>
             <help/>
             <hint/>
-            <label>Capacity count</label>
+            <label>Reference for</label>
             <language>en</language>
-            <name>x_1836079_office_base</name>
+            <name>x_1836079_office_registration</name>
             <plural/>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-21 18:49:10</sys_created_on>
-            <sys_id>fabe4928c3f43210a770b92ed4013148</sys_id>
-            <sys_mod_count>7</sys_mod_count>
-            <sys_name>Capacity count</sys_name>
+            <sys_created_on>2025-10-22 17:52:59</sys_created_on>
+            <sys_id>297b4af8c3b43210a770b92ed401311d</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_name>Reference for</sys_name>
             <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
             <sys_policy/>
             <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
-            <sys_update_name>sys_documentation_x_1836079_office_base_capacity_count_en</sys_update_name>
+            <sys_update_name>sys_documentation_x_1836079_office_registration_reference_for_en</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-22 18:35:50</sys_updated_on>
+            <sys_updated_on>2025-10-22 17:52:59</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

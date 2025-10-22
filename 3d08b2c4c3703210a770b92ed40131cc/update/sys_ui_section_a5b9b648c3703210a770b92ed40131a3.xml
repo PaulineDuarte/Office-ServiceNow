@@ -4,13 +4,13 @@
             <element>name</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-22 12:07:51</sys_created_on>
-            <sys_id>b57c3cb4c3303210a770b92ed4013121</sys_id>
+            <sys_created_on>2025-10-22 18:37:07</sys_created_on>
+            <sys_id>bb8596b8c3f43210a770b92ed401317a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1836079_office_base" sys_domain="global" view="Default view">a5b9b648c3703210a770b92ed40131a3</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-22 12:07:51</sys_updated_on>
+            <sys_updated_on>2025-10-22 18:37:07</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,41 +18,41 @@
             <element>state</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-22 12:07:51</sys_created_on>
-            <sys_id>3d7c3cb4c3303210a770b92ed4013121</sys_id>
+            <sys_created_on>2025-10-22 18:37:07</sys_created_on>
+            <sys_id>778596b8c3f43210a770b92ed401317b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1836079_office_base" sys_domain="global" view="Default view">a5b9b648c3703210a770b92ed40131a3</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-22 12:07:51</sys_updated_on>
+            <sys_updated_on>2025-10-22 18:37:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>city</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-22 18:37:07</sys_created_on>
+            <sys_id>fb8596b8c3f43210a770b92ed401317b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1836079_office_base" sys_domain="global" view="Default view">a5b9b648c3703210a770b92ed40131a3</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-22 18:37:07</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>manager_base</element>
-            <position>2</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-22 12:07:51</sys_created_on>
-            <sys_id>b17c3cb4c3303210a770b92ed4013122</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1836079_office_base" sys_domain="global" view="Default view">a5b9b648c3703210a770b92ed40131a3</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-22 12:07:51</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>longitude</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-22 12:07:51</sys_created_on>
-            <sys_id>397c3cb4c3303210a770b92ed4013122</sys_id>
+            <sys_created_on>2025-10-22 18:37:07</sys_created_on>
+            <sys_id>738596b8c3f43210a770b92ed401317c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1836079_office_base" sys_domain="global" view="Default view">a5b9b648c3703210a770b92ed40131a3</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-22 12:07:51</sys_updated_on>
+            <sys_updated_on>2025-10-22 18:37:07</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>temperature</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-22 12:07:51</sys_created_on>
-            <sys_id>bd7c3cb4c3303210a770b92ed4013122</sys_id>
+            <sys_created_on>2025-10-22 18:37:07</sys_created_on>
+            <sys_id>f78596b8c3f43210a770b92ed401317c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1836079_office_base" sys_domain="global" view="Default view">a5b9b648c3703210a770b92ed40131a3</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-22 12:07:51</sys_updated_on>
+            <sys_updated_on>2025-10-22 18:37:07</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -74,69 +74,55 @@
             <element>.split</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-22 12:07:51</sys_created_on>
-            <sys_id>357c3cb4c3303210a770b92ed4013123</sys_id>
+            <sys_created_on>2025-10-22 18:37:07</sys_created_on>
+            <sys_id>7f8596b8c3f43210a770b92ed401317c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1836079_office_base" sys_domain="global" view="Default view">a5b9b648c3703210a770b92ed40131a3</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-22 12:07:51</sys_updated_on>
+            <sys_updated_on>2025-10-22 18:37:07</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>city</element>
+            <element>max_capacity</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-22 12:07:51</sys_created_on>
-            <sys_id>b97c3cb4c3303210a770b92ed4013123</sys_id>
+            <sys_created_on>2025-10-22 18:37:07</sys_created_on>
+            <sys_id>f38596b8c3f43210a770b92ed401317d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1836079_office_base" sys_domain="global" view="Default view">a5b9b648c3703210a770b92ed40131a3</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-22 12:07:51</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>max_capacity</element>
-            <position>7</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-22 12:07:51</sys_created_on>
-            <sys_id>317c3cb4c3303210a770b92ed4013124</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1836079_office_base" sys_domain="global" view="Default view">a5b9b648c3703210a770b92ed40131a3</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-22 12:07:51</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>capacity_count</element>
-            <position>8</position>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-22 12:07:51</sys_created_on>
-            <sys_id>b57c3cb4c3303210a770b92ed4013124</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1836079_office_base" sys_domain="global" view="Default view">a5b9b648c3703210a770b92ed40131a3</sys_ui_section>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-22 12:07:51</sys_updated_on>
+            <sys_updated_on>2025-10-22 18:37:07</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>latitude</element>
-            <position>9</position>
+            <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-22 12:07:51</sys_created_on>
-            <sys_id>0e7c3cb4c3303210a770b92ed4013124</sys_id>
+            <sys_created_on>2025-10-22 18:37:07</sys_created_on>
+            <sys_id>7b8596b8c3f43210a770b92ed401317d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1836079_office_base" sys_domain="global" view="Default view">a5b9b648c3703210a770b92ed40131a3</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-22 12:07:51</sys_updated_on>
+            <sys_updated_on>2025-10-22 18:37:07</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>longitude</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-22 18:37:07</sys_created_on>
+            <sys_id>ff8596b8c3f43210a770b92ed401317d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1836079_office_base" sys_domain="global" view="Default view">a5b9b648c3703210a770b92ed40131a3</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-22 18:37:07</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

@@ -74,10 +74,73 @@
         <sc_ic_item_staging/>
         <sc_ic_version/>
         <sc_template/>
-        <script><![CDATA[// // testar o script aqui para pegar os campos 
-// current.u_name = producer.base; 
-// current.u_function = producer.function; 
+        <script><![CDATA[/* --- VALORES DE ESTADO (Baseado no seu input) --- */
+var ESTADO_REJEITADO = '4';
+var ESTADO_APROVADO = '3';
+var ESTADO_PENDENTE = '2';
 
+/* --- DADOS DE ENTRADA --- */
+var baseSelecionadaId = producer.base; // Nome da sua variável de Base
+var usuarioAtualId = gs.getUserID(); // O usuário logado que está enviando
+
+/*******************************************************
+ * PASSO 1: VALIDAÇÃO DA HISTÓRIA 8 (Usuário Único)
+ * "O usuário já tem uma inscrição ativa (Aprovada ou Pendente)?"
+ *******************************************************/
+
+// MUDE 'requested_for' para o seu campo de usuário real (ex: u_participant)
+var campoUsuario = 'opened_by'; 
+
+var grUsuario = new GlideRecord('x_1836079_office_registration');
+grUsuario.addQuery(campoUsuario, usuarioAtualId); // Procura pelo usuário
+grUsuario.addQuery('state', '!=', ESTADO_REJEITADO); // Onde o estado NÃO SEJA Rejeitado
+grUsuario.setLimit(1); // Otimização: só precisamos de 1 para bloquear
+grUsuario.query();
+
+if (grUsuario.next()) {
+    /*******************************************************
+     * FALHA NA H8: O usuário já está ativo em outro lugar.
+     *******************************************************/
+    gs.addErrorMessage("Você já possui uma inscrição ativa ou pendente na base '" + grUsuario.getDisplayValue('base') + "'. Não é possível se registrar em duas bases.");
+    current.setAbortAction(true); // Aborta a criação do registro
+
+} else {
+    /*******************************************************
+     * SUCESSO NA H8: O usuário está livre.
+     * Vamos checar a VALIDAÇÃO DA HISTÓRIA 7 (Lotação da Base)
+     *******************************************************/
+
+    // --- Calcular a Lotação Atual (H11) ---
+    var contagemAtual = 0;
+    var ga = new GlideAggregate('x_1836079_office_registration');
+    ga.addQuery('base', baseSelecionadaId);
+    // H11 conta Aprovados (3) e Pendentes (2)
+    ga.addEncodedQuery('state=' + ESTADO_APROVADO + '^ORstate=' + ESTADO_PENDENTE);
+    ga.addAggregate('COUNT');
+    ga.query();
+
+    if (ga.next()) {
+        contagemAtual = ga.getAggregate('COUNT');
+    }
+
+    // --- Buscar a Lotação Máxima (H7) ---
+    var maxCapacidade = 0;
+    var grBase = new GlideRecord('x_1836079_office_base');
+    if (grBase.get(baseSelecionadaId)) {
+        maxCapacidade = parseInt(grBase.getValue('max_capacity')) || 0;
+    }
+
+    // --- A Validação de Lotação (H7) ---
+    if (contagemAtual >= maxCapacidade) {
+        /*******************************************************
+         * FALHA NA H7: A Base está cheia.
+         *******************************************************/
+        gs.addErrorMessage("A base '" + grBase.getDisplayValue('name') + "' já atingiu sua lotação máxima (" + maxCapacidade + ").");
+        current.setAbortAction(true); // Aborta a criação
+    }
+}
+
+// Se o script chegar aqui sem entrar em nenhum 'if', o registro será criado.
 
 ]]></script>
         <short_description>Request your registration on a per-function basis.</short_description>
@@ -88,14 +151,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-20 14:30:07</sys_created_on>
         <sys_id>a619c30cc3b03210a770b92ed4013120</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name>Register for Base</sys_name>
         <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
         <sys_update_name>sc_cat_item_producer_a619c30cc3b03210a770b92ed4013120</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2025-10-21 18:56:35</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-22 15:49:56</sys_updated_on>
         <table_name>x_1836079_office_registration</table_name>
         <taxonomy_topic/>
         <template/>
@@ -103,7 +166,7 @@
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>23</version>
+        <version>31</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>

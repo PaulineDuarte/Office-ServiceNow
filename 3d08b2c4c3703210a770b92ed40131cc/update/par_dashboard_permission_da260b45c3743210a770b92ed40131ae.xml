@@ -3,7 +3,7 @@
         <can_read>true</can_read>
         <can_share>true</can_share>
         <can_write>true</can_write>
-        <dashboard display_value="Office Management">9e260b45c3743210a770b92ed40131aa</dashboard>
+        <dashboard display_value="Office Management Dashboard">9e260b45c3743210a770b92ed40131aa</dashboard>
         <group/>
         <owner>true</owner>
         <role/>

@@ -24,7 +24,13 @@ function onSubmit() {
     var stateField = 'state';
 
     // 1. Rodar APENAS se um dos campos-chave for modificado ou for um novo registro
-    if (g_form.isNewRecord() || g_form.isFieldModified(managerField) || g_form.isFieldModified(nameField) || g_form.isFieldModified(cityField) || g_form.isFieldModified(stateField)) {
+    // if (g_form.isNewRecord() || g_form.isFieldModified(managerField) || g_form.isFieldModified(nameField) || g_form.isFieldModified(cityField) || g_form.isFieldModified(stateField)) {
+
+	if (g_form.isNewRecord() || 
+        g_form.getControl(managerField).changed || 
+        g_form.getControl(nameField).changed || 
+        g_form.getControl(cityField).changed || 
+        g_form.getControl(stateField).changed) {
 
         var ga = new GlideAjax('x_1836079_office.BaseUtils'); // <-- Use o seu API Name
         
@@ -69,19 +75,19 @@ function validacaoCallback(response) {
 
         case 'ERR_DUPE_MANAGER':
             // Erro da História 2
-            g_form.addErrorMessage('Este gerente já está alocado em outra base. A submissão foi cancelada.');
+            g_form.addErrorMessage('This manager is already assigned to another base');
             g_form.setValue(managerField, ''); // Limpar o campo
             break;
 
         case 'ERR_DUPE_NAME':
             // Erro da História 4a
-            g_form.addErrorMessage('Já existe uma base com este Nome. A submissão foi cancelada.');
+            g_form.addErrorMessage('There is already a base with this Name.');
             g_form.setValue(nameField, ''); // Limpar o campo
             break;
 
         case 'ERR_DUPE_LOCATION':
             // Erro da História 4b
-            g_form.addErrorMessage('Já existe uma base com esta combinação de Cidade e Estado. A submissão foi cancelada.');
+            g_form.addErrorMessage('There is already a base with this combination of City and State.');
             g_form.setValue(cityField, ''); // Limpar os campos
             g_form.setValue(stateField, '');
             break;
@@ -97,7 +103,7 @@ function validacaoCallback(response) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>17914c54c3f43210a770b92ed4013115</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Validate Duplicate Name</sys_name>
         <sys_overrides/>
         <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
@@ -105,7 +111,7 @@ function validacaoCallback(response) {
         <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
         <sys_update_name>sys_script_client_17914c54c3f43210a770b92ed4013115</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-20 19:11:55</sys_updated_on>
+        <sys_updated_on>2025-10-23 02:02:24</sys_updated_on>
         <table>x_1836079_office_base</table>
         <type>onSubmit</type>
         <ui_type>0</ui_type>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Teste para impedir que o office administrator consiga cadastrar novos registros que já estão lotados</description>
+        <field/>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>Validade Max_Capacity</name>
+        <order/>
+        <script><![CDATA[// Flag global para impedir um loop infinito
+var g_form_submit_processed_h13 = false;
+
+function onSubmit() {
+
+    // 1. Se este for o *segundo* envio (disparado pelo nosso callback), permita
+    if (g_form_submit_processed_h13) {
+        return true;
+    }
+
+    // 2. Só rodar se for um registo novo
+    if (!g_form.isNewRecord()) {
+        return true; // Se estiver a editar, permitir
+    }
+
+    // 3. Só rodar se o estado for 'Aprovado' (H13)
+    var ESTADO_APROVADO = '3';
+    if (g_form.getValue('state') != ESTADO_APROVADO) {
+        return true; // Se não for 'Aprovado', permitir
+    }
+
+    // 4. Chamar o GlideAjax (ASSÍNCRONO)
+    var baseId = g_form.getValue('base');
+
+    var ga = new GlideAjax('x_1836079_office.BaseUtils'); // O seu Script Include
+    ga.addParam('sysparm_name', 'checkBaseOccupancy'); // A nossa função da H13
+    ga.addParam('sysparm_base_id', baseId);
+    
+    // Use getXML() (assíncrono) e diga-lhe qual função chamar quando a resposta voltar
+    ga.getXML(h13ValidationCallback);
+
+    // 5. PARE o envio do formulário (pela primeira vez)
+    // O nosso callback (h13ValidationCallback) irá reenviá-lo se a validação passar.
+    return false;
+}
+
+// 6. O "Callback" (Função chamada quando o servidor responder)
+function h13ValidationCallback(response) {
+
+    // Pega a resposta (o JSON) do Script Include
+    var jsonResponse = response.responseXML.documentElement.getAttribute("answer");
+
+    // Verifica se a resposta não é nula (caso o Script Include ainda tenha erros)
+    if (!jsonResponse) {
+        g_form.addErrorMessage('Erro de Validação: O servidor não respondeu. Contacte o Admin.');
+        return; // Para
+    }
+
+    var responseObj = JSON.parse(jsonResponse);
+
+    // 7. A Lógica de Validação
+    if (responseObj.current >= responseObj.max) {
+        // FALHOU: A base está lotada
+        g_form.addErrorMessage("Validation Failed : The base '" +
+            g_form.getDisplayValue('base') +
+            "'has already reached maximum capacity (" + responseObj.current + "/" + responseObj.max + ").");
+
+        // Não fazer nada (o envio já foi parado)
+
+    } else {
+        // SUCESSO: A base tem vagas
+
+        // 1. Define a nossa flag global como 'true'
+        g_form_submit_processed_h13 = true;
+
+        // 2. Reenvia o formulário. O script 'onSubmit' irá rodar de novo,
+        // mas desta vez a flag (passo 1) irá deixá-lo passar.
+        g_form.submit(g_form.getActionName());
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-23 12:37:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3b6c020dc3303210a770b92ed40131f6</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Validade Max_Capacity</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
+        <sys_update_name>sys_script_client_3b6c020dc3303210a770b92ed40131f6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-23 17:07:32</sys_updated_on>
+        <table>x_1836079_office_registration</table>
+        <type>onSubmit</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

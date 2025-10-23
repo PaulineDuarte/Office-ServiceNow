@@ -101,8 +101,9 @@ if (grUsuario.next()) {
     /*******************************************************
      * FALHA NA H8: O usuário já está ativo em outro lugar.
      *******************************************************/
-    gs.addErrorMessage("Você já possui uma inscrição ativa ou pendente na base '" + grUsuario.getDisplayValue('base') + "'. Não é possível se registrar em duas bases.");
+    gs.addErrorMessage("You already have an active or pending subscription in the database'" + grUsuario.getDisplayValue('base') + "'. It is not possible to register in two databases.");
     current.setAbortAction(true); // Aborta a criação do registro
+
 
 } else {
     /*******************************************************
@@ -135,7 +136,7 @@ if (grUsuario.next()) {
         /*******************************************************
          * FALHA NA H7: A Base está cheia.
          *******************************************************/
-        gs.addErrorMessage("A base '" + grBase.getDisplayValue('name') + "' já atingiu sua lotação máxima (" + maxCapacidade + ").");
+        gs.addErrorMessage("The base '" + grBase.getDisplayValue('name') + "' is full (" + maxCapacidade + ").");
         current.setAbortAction(true); // Aborta a criação
     }
 }
@@ -151,14 +152,14 @@ if (grUsuario.next()) {
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-20 14:30:07</sys_created_on>
         <sys_id>a619c30cc3b03210a770b92ed4013120</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>39</sys_mod_count>
         <sys_name>Register for Base</sys_name>
         <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
         <sys_update_name>sc_cat_item_producer_a619c30cc3b03210a770b92ed4013120</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-22 18:30:55</sys_updated_on>
+        <sys_updated_on>2025-10-23 16:45:59</sys_updated_on>
         <table_name>x_1836079_office_registration</table_name>
         <taxonomy_topic/>
         <template/>
@@ -166,7 +167,7 @@ if (grUsuario.next()) {
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>36</version>
+        <version>40</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>

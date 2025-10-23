@@ -69,20 +69,57 @@ BaseUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         return 'VALID'; // Resposta: Tudo OK!
     },
 
-    type: 'BaseUtils'
+    /* ** Nova função para a H13 (Validação de Lotação no Formulário)
+** Esta função calcula a lotação (H11) e a lotação máxima
+*/
+	checkBaseOccupancy: function() {
+		var baseId = this.getParameter('sysparm_base_id');
+		var response = {
+			current: 0,
+			max: 0
+		};
+
+		// 1. Buscar a Lotação Máxima da Base
+		var grBase = new GlideRecord('x_1836079_office_base'); // Sua tabela de Base
+		if (grBase.get(baseId)) {
+			response.max = parseInt(grBase.getValue('max_capacity')) || 0;
+		}
+
+		// 2. Calcular a Lotação Atual (H11: Aprovados + Pendentes)
+		var ESTADO_APROVADO = '3';
+		var ESTADO_PENDENTE = '2';
+
+		var ga = new GlideAggregate('x_1836079_office_registration'); // Sua tabela de Inscrição
+		ga.addQuery('base', baseId);
+		ga.addEncodedQuery('state=' + ESTADO_APROVADO + '^ORstate=' + ESTADO_PENDENTE);
+		ga.addAggregate('COUNT');
+		ga.query();
+
+		if (ga.next()) {
+			response.current = parseInt(ga.getAggregate('COUNT'));
+		}
+
+		// 3. Retornar os dois números
+		// --- A CORREÇÃO ESTÁ AQUI ---
+		// Errado: var json = new JSON(); return json.encode(response);
+		// Certo: Usar o método estático JSON.stringify()
+		return JSON.stringify(response);
+},
+
+	type: 'BaseUtils'
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-20 17:16:08</sys_created_on>
         <sys_id>6fee63c8c3743210a770b92ed4013153</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>BaseUtils</sys_name>
         <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
         <sys_update_name>sys_script_include_6fee63c8c3743210a770b92ed4013153</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-20 19:03:14</sys_updated_on>
+        <sys_updated_on>2025-10-23 12:35:26</sys_updated_on>
     </sys_script_include>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>6fee63c8c3743210a770b92ed4013153</id>

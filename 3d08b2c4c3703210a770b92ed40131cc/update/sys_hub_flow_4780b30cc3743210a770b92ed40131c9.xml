@@ -2,7 +2,7 @@
     <sys_hub_flow action="INSERT_OR_UPDATE">
         <access>public</access>
         <acls/>
-        <active>true</active>
+        <active>false</active>
         <annotation/>
         <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=176191000,viewActivatedIn=naturalLanguage</attributes>
         <authored_on_release_version>26000</authored_on_release_version>
@@ -36,7 +36,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4780b30cc3743210a770b92ed40131c9</sys_id>
-        <sys_mod_count>47</sys_mod_count>
+        <sys_mod_count>48</sys_mod_count>
         <sys_name>Base- auto manager</sys_name>
         <sys_overrides/>
         <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
@@ -44,7 +44,7 @@
         <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
         <sys_update_name>sys_hub_flow_4780b30cc3743210a770b92ed40131c9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-23 00:39:07</sys_updated_on>
+        <sys_updated_on>2025-10-23 12:27:08</sys_updated_on>
         <type>flow</type>
         <version>2</version>
     </sys_hub_flow>
@@ -78,16 +78,16 @@
         <table>x_1836079_office_base</table>
     </sys_flow_record_trigger>
     <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
         <identifier>4780b30cc3743210a770b92ed40131c9</identifier>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-22 18:15:44</sys_created_on>
         <sys_id>f2a0deb0c3f43210a770b92ed401315e</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-22 18:15:44</sys_updated_on>
+        <sys_updated_on>2025-10-23 12:27:08</sys_updated_on>
         <trigger display_value="">bb5a14e4c3f03210a770b92ed4013158</trigger>
     </sys_trigger_runner_mapping>
     <sys_trigger_runner_mapping action="delete_multiple" query="identifier=4780b30cc3743210a770b92ed40131c9^sys_idNOT INf2a0deb0c3f43210a770b92ed401315e"/>

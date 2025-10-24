@@ -4,27 +4,26 @@
         <admin_overrides>true</admin_overrides>
         <advanced>false</advanced>
         <applies_to/>
-        <condition table="x_1836079_office_registration.function">state=1^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
-        </condition>
+        <condition/>
         <decision_type>allow</decision_type>
-        <description>Allow create for base in x_1836079_office_registration, if the ACL condition (state=1^EQ) evaluates to true.</description>
+        <description/>
         <local_or_existing>Local</local_or_existing>
-        <name>x_1836079_office_registration.function</name>
+        <name>x_1836079_office_registration</name>
         <operation display_value="create">create</operation>
         <script/>
         <security_attribute/>
         <sys_class_name>sys_security_acl</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-23 22:49:57</sys_created_on>
-        <sys_id>9d095011c33c3210a770b92ed4013157</sys_id>
+        <sys_created_on>2025-10-24 14:42:25</sys_created_on>
+        <sys_id>5d03f3d5c3f03210a770b92ed401315b</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_1836079_office_registration.function</sys_name>
+        <sys_name>x_1836079_office_registration</sys_name>
         <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
-        <sys_update_name>sys_security_acl_9d095011c33c3210a770b92ed4013157</sys_update_name>
+        <sys_update_name>sys_security_acl_5d03f3d5c3f03210a770b92ed401315b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-23 22:49:57</sys_updated_on>
+        <sys_updated_on>2025-10-24 14:42:25</sys_updated_on>
         <type display_value="record">record</type>
     </sys_security_acl>
 </record_update>

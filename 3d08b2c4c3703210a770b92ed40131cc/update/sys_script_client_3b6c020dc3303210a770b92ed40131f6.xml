@@ -26,10 +26,16 @@ function onSubmit() {
     }
 
     // 3. Só rodar se o estado for 'Aprovado' (H13)
-    var ESTADO_APROVADO = '3';
-    if (g_form.getValue('state') != ESTADO_APROVADO) {
-        return true; // Se não for 'Aprovado', permitir
-    }
+    // var ESTADO_APROVADO = '3' || '1';
+    // if (g_form.getValue('state') != ESTADO_APROVADO) {
+    //     return true; // Se não for 'Aprovado', permitir
+    // }
+
+	var ESTADO_APROVADO = ['3', '1'];
+	if (!ESTADO_APROVADO.includes(g_form.getValue('state'))) {
+    	  return true;
+		}
+
 
     // 4. Chamar o GlideAjax (ASSÍNCRONO)
     var baseId = g_form.getValue('base');
@@ -64,7 +70,7 @@ function h13ValidationCallback(response) {
     if (responseObj.current >= responseObj.max) {
         // FALHOU: A base está lotada
         g_form.addErrorMessage("Validation Failed : The base '" +
-            g_form.getDisplayValue('base') +
+            g_form.getDisplayValue('base.name') +
             "'has already reached maximum capacity (" + responseObj.current + "/" + responseObj.max + ").");
 
         // Não fazer nada (o envio já foi parado)
@@ -86,7 +92,7 @@ function h13ValidationCallback(response) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3b6c020dc3303210a770b92ed40131f6</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Validade Max_Capacity</sys_name>
         <sys_overrides/>
         <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
@@ -94,7 +100,7 @@ function h13ValidationCallback(response) {
         <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
         <sys_update_name>sys_script_client_3b6c020dc3303210a770b92ed40131f6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-23 17:07:32</sys_updated_on>
+        <sys_updated_on>2025-10-24 13:21:14</sys_updated_on>
         <table>x_1836079_office_registration</table>
         <type>onSubmit</type>
         <ui_type>10</ui_type>

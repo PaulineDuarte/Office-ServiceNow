@@ -9,14 +9,14 @@
         <filter_condition/>
         <filter_roles>x_1836079_office.administrator</filter_roles>
         <hierarchical_lists>false</hierarchical_lists>
-        <label>Teste para o office administrator</label>
+        <label/>
         <link_condition/>
         <link_roles/>
         <list_edit_insert_row>false</list_edit_insert_row>
         <list_edit_ref_qual_tag/>
         <list_edit_type/>
         <name>x_1836079_office_base</name>
-        <new_condition/>
+        <new_condition><![CDATA[answer = false ; ]]></new_condition>
         <new_roles/>
         <omit_columns_if_empty>false</omit_columns_if_empty>
         <omit_count>false</omit_count>
@@ -35,7 +35,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4fad2174c3343210a770b92ed401312f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>x_1836079_office_base</sys_name>
         <sys_overrides display_value="">global</sys_overrides>
         <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
@@ -43,7 +43,7 @@
         <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
         <sys_update_name>sys_ui_list_control_4fad2174c3343210a770b92ed401312f</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-22 15:43:48</sys_updated_on>
+        <sys_updated_on>2025-10-24 14:40:37</sys_updated_on>
     </sys_ui_list_control>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>4fad2174c3343210a770b92ed401312f</id>

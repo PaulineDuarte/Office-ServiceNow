@@ -2,8 +2,8 @@
     <par_dashboard_widget action="INSERT_OR_UPDATE">
         <canvas display_value="">5226cb45c3743210a770b92ed40131bd</canvas>
         <component display_value="Image">15fe506403f8a98575b6df59008ea8f1</component>
-        <component_props>{"src":"/now-image-placeholder.jpg","sources":"[]","fit":"fill","position":"center center","alt":"","href":"https://www.servicenow.com/","configAria":"{\"link\":{}}"}</component_props>
-        <h>9</h>
+        <component_props>{"src":"upload_ChatGPT Image 23 de out. de 2025, 20_16_05.png","sources":"[]","fit":"fill","position":"center center","alt":"","href":"https://www.servicenow.com/","configAria":"{\"link\":{}}","id":"height","value":180,"propLabel":"Height","width":250,"height":180,"landmark":false,"noDebounce":true}</component_props>
+        <h>10</h>
         <name/>
         <stored_component/>
         <sys_class_name>par_dashboard_widget</sys_class_name>
@@ -12,7 +12,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bcc77b05c3783210a770b92ed4013116</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
@@ -20,9 +20,9 @@
         <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
         <sys_update_name>par_dashboard_widget_bcc77b05c3783210a770b92ed4013116</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-23 20:43:59</sys_updated_on>
+        <sys_updated_on>2025-10-23 23:27:54</sys_updated_on>
         <visualization/>
-        <w>8</w>
+        <w>7</w>
         <widget_props/>
         <x>1</x>
         <y>0</y>

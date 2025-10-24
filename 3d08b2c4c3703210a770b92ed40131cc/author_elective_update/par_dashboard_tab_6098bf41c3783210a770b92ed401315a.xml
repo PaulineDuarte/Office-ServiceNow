@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_tab">
+    <par_dashboard_tab action="DELETE">
+        <active>true</active>
+        <background_color/>
+        <dashboard display_value="Office Management Dashboard">9e260b45c3743210a770b92ed40131aa</dashboard>
+        <name>New Tab 2</name>
+        <order>1</order>
+        <sys_class_name>par_dashboard_tab</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-23 20:28:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6098bf41c3783210a770b92ed401315a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>New Tab 2</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
+        <sys_update_name>par_dashboard_tab_6098bf41c3783210a770b92ed401315a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-23 20:28:11</sys_updated_on>
+    </par_dashboard_tab>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Office">3d08b2c4c3703210a770b92ed40131cc</application>
+        <file_path/>
+        <instance_id>7f30fc233bdbded48d70e0bf55e45ad4</instance_id>
+        <instance_name>dev293871</instance_name>
+        <name>par_dashboard_tab_6098bf41c3783210a770b92ed401315a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_tab"><par_dashboard_tab action="INSERT_OR_UPDATE"><active>true</active><background_color/><dashboard display_value="Office Management Dashboard">9e260b45c3743210a770b92ed40131aa</dashboard><name>New Tab 2</name><order>1</order><sys_class_name>par_dashboard_tab</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-23 20:28:11</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>6098bf41c3783210a770b92ed401315a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>New Tab 2</sys_name><sys_overrides/><sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package><sys_policy/><sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope><sys_update_name>par_dashboard_tab_6098bf41c3783210a770b92ed401315a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-23 20:28:11</sys_updated_on></par_dashboard_tab></record_update>]]></payload>
+        <payload_hash>-1793099890</payload_hash>
+        <record_name>New Tab 2</record_name>
+        <reverted_from/>
+        <source>b908b2c4c3703210a770b92ed40131d1</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-23 20:28:11</sys_created_on>
+        <sys_id>e898bf41c3783210a770b92ed401315c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19a12c1eff60000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-23 20:28:11</sys_updated_on>
+        <type>PAR Dashboard Tab</type>
+        <update_guid>ec98bf41847832104d9ced8edd19ca5b</update_guid>
+        <update_guid_history>ec98bf41847832104d9ced8edd19ca5b:-1793099890</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="New Tab 2">0c3cff49c3783210a770b92ed40131cd</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-23 20:43:59</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard_tab">par_dashboard_tab</sys_db_object>
+        <sys_id>0a38cfc5c5384a9c810d74d11748ebd9</sys_id>
+        <sys_metadata>6098bf41c3783210a770b92ed401315a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>New Tab 2</sys_name>
+        <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
+        <sys_scope_delete display_value="">7087e2208e764a1895bc39a715b8a590</sys_scope_delete>
+        <sys_update_name>par_dashboard_tab_6098bf41c3783210a770b92ed401315a</sys_update_name>
+        <sys_update_version display_value="par_dashboard_tab_6098bf41c3783210a770b92ed401315a">e898bf41c3783210a770b92ed401315c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-23 20:43:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="95b93e48c3703210a770b92ed40131f7" label="Base" max_length="40" name="x_1836079_office_base" type="collection">
+        <element label="Max capacity" max_length="40" name="max_capacity" type="integer"/>
+        <element choice="1" default="1" label="Integration State" max_length="40" name="integration_state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Integration Sucess" sequence="3" value="3"/>
+                <element inactive_on_update="false" label="Starting" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Integration Failure" sequence="2" value="4"/>
+                <element inactive_on_update="false" label="Integrating" sequence="1" value="2"/>
+            </choice>
+        </element>
+        <element label="Integration Erro Message" max_length="1000" name="integration_erro_message" type="string"/>
+        <element label="Latitude" max_length="40" name="latitude" type="string"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <element label="temperature" max_length="40" name="temperature" type="integer"/>
+        <element label="City" max_length="40" name="city" type="string"/>
+        <element label="Base manager" max_length="32" name="manager_base" reference="sys_user" reference_qual="roles=x_1836079_office.manager^EQ" reference_qual_condition="roles=x_1836079_office.manager^EQ" type="reference"/>
+        <element label="Longitude" max_length="40" name="longitude" type="string"/>
+        <element label="State" max_length="40" name="state" type="string"/>
+        <element active="false" default="0" label="Capacity count" max_length="40" name="capacity_count" type="integer"/>
+        <index name="index">
+            <element name="manager_base"/>
+        </index>
+    </element>
+</database>

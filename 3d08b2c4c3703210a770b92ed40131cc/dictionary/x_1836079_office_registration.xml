@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e4aa36c8c3703210a770b92ed4013185" extends="task" label="Registration" max_length="40" name="x_1836079_office_registration" type="collection">
+        <element label="Reproval reason" max_length="1000" name="reproval_reason" type="string"/>
+        <element label="Reference for" max_length="32" name="reference_for" reference="sys_user" type="reference"/>
+        <element label="Function" max_length="32" name="function" reference="x_1836079_office_function" type="reference"/>
+        <element label="Base" max_length="32" name="base" reference="x_1836079_office_base" type="reference"/>
+    </element>
+</database>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_dictionary action="DELETE" element="function" table="x_1836079_office_function">
+        <active>true</active>
+        <array>false</array>
+        <attributes/>
+        <audit>false</audit>
+        <calculation/>
+        <choice>0</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Function</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>true</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>function</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <internal_type display_value="String">string</internal_type>
+        <mandatory>false</mandatory>
+        <max_length>1000</max_length>
+        <name>x_1836079_office_function</name>
+        <next_element/>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-20 13:18:03</sys_created_on>
+        <sys_id>a659b248c3703210a770b92ed40131c5</sys_id>
+        <sys_name>Function</sys_name>
+        <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
+        <sys_update_name>sys_dictionary_x_1836079_office_function_function</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-20 20:06:43</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_dictionary>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Office">3d08b2c4c3703210a770b92ed40131cc</application>
+        <file_path/>
+        <instance_id>7f30fc233bdbded48d70e0bf55e45ad4</instance_id>
+        <instance_name>dev293871</instance_name>
+        <name>sys_dictionary_x_1836079_office_function_function</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_dictionary action="INSERT_OR_UPDATE" element="function" table="x_1836079_office_function"><active>true</active><array>false</array><attributes/><audit>false</audit><calculation/><choice>0</choice><choice_field/><choice_table/><column_label>Function</column_label><comments/><create_roles/><default_value/><defaultsort/><delete_roles/><dependent/><dependent_on_field/><display>true</display><dynamic_creation>false</dynamic_creation><dynamic_creation_script/><dynamic_default_value/><dynamic_ref_qual/><element>function</element><element_reference>false</element_reference><foreign_database/><formula/><function_definition/><function_field>false</function_field><internal_type display_value="String">string</internal_type><mandatory>false</mandatory><max_length>1000</max_length><name>x_1836079_office_function</name><next_element/><primary>false</primary><read_only>false</read_only><read_roles/><reference/><reference_cascade_rule/><reference_floats>false</reference_floats><reference_key/><reference_qual/><reference_qual_condition/><reference_type/><spell_check>false</spell_check><staged>false</staged><sys_class_name>sys_dictionary</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-20 13:18:03</sys_created_on><sys_id>a659b248c3703210a770b92ed40131c5</sys_id><sys_name>Function</sys_name><sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package><sys_policy/><sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope><sys_update_name>sys_dictionary_x_1836079_office_function_function</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-20 20:06:43</sys_updated_on><table_reference>false</table_reference><text_index>false</text_index><unique>false</unique><use_dependent_field>false</use_dependent_field><use_dynamic_default>false</use_dynamic_default><use_reference_qualifier>simple</use_reference_qualifier><virtual>false</virtual><virtual_type>script</virtual_type><widget/><write_roles/><xml_view>false</xml_view></sys_dictionary></record_update>]]></payload>
+        <payload_hash>1881778172</payload_hash>
+        <record_name>Function.Function</record_name>
+        <reverted_from/>
+        <source>b908b2c4c3703210a770b92ed40131d1</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-20 20:06:43</sys_created_on>
+        <sys_id>81e694d0c3783210a770b92ed4013146</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19a033b37df0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-20 20:06:43</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>49e694d0a17832104c832c917ea5ed45</update_guid>
+        <update_guid_history>49e694d0a17832104c832c917ea5ed45:1881778172,d0e694d01a783210ace5a01445cee725:1713170169,e865505000783210b9d01a6e47bb44c2:1881778172,7659f248fc7032108e9b6ba0fc294f01:827880150,3a59b2483e703210518253132e6d3bd9:-974672071</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-21 17:59:47</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>16a8507cdde846c68a0b5299450e9e61</sys_id>
+        <sys_metadata>a659b248c3703210a770b92ed40131c5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Function</sys_name>
+        <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
+        <sys_parent display_value="Office Function">24f8f608c3703210a770b92ed401317d</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
+        <sys_scope_delete display_value="">7087e2208e764a1895bc39a715b8a590</sys_scope_delete>
+        <sys_update_name>sys_dictionary_x_1836079_office_function_function</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_x_1836079_office_function_function">81e694d0c3783210a770b92ed4013146</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-21 17:59:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

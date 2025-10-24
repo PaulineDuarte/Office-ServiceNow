@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_formatter">
+    <sys_ui_formatter action="DELETE">
+        <active>true</active>
+        <angular_module/>
+        <formatter/>
+        <name>Process Flow</name>
+        <seismic_component/>
+        <sys_class_name>sys_ui_formatter</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-22 16:56:02</sys_created_on>
+        <sys_id>175e7d78c3743210a770b92ed4013145</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Process Flow</sys_name>
+        <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
+        <sys_update_name>sys_ui_formatter_175e7d78c3743210a770b92ed4013145</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-22 16:56:02</sys_updated_on>
+        <table>x_1836079_office_registration</table>
+        <type>formatter</type>
+    </sys_ui_formatter>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Office">3d08b2c4c3703210a770b92ed40131cc</application>
+        <file_path/>
+        <instance_id>7f30fc233bdbded48d70e0bf55e45ad4</instance_id>
+        <instance_name>dev293871</instance_name>
+        <name>sys_ui_formatter_175e7d78c3743210a770b92ed4013145</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_formatter"><sys_ui_formatter action="INSERT_OR_UPDATE"><active>true</active><angular_module/><formatter/><name>Process Flow</name><seismic_component/><sys_class_name>sys_ui_formatter</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-22 16:56:02</sys_created_on><sys_id>175e7d78c3743210a770b92ed4013145</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Process Flow</sys_name><sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package><sys_policy/><sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope><sys_update_name>sys_ui_formatter_175e7d78c3743210a770b92ed4013145</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-22 16:56:02</sys_updated_on><table>x_1836079_office_registration</table><type>formatter</type></sys_ui_formatter></record_update>]]></payload>
+        <payload_hash>2019498633</payload_hash>
+        <record_name>Process Flow</record_name>
+        <reverted_from/>
+        <source>b908b2c4c3703210a770b92ed40131d1</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-22 16:56:02</sys_created_on>
+        <sys_id>5b6e79b4c3743210a770b92ed4013126</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19a0cd95a8d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-22 16:56:02</sys_updated_on>
+        <type>UI Formatter</type>
+        <update_guid>5f6e79b4b374321018611962defb5d25</update_guid>
+        <update_guid_history>5f6e79b4b374321018611962defb5d25:2019498633</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-22 16:56:50</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_formatter">sys_ui_formatter</sys_db_object>
+        <sys_id>03b2bbaaf06f42e4810b3a0eeffdde10</sys_id>
+        <sys_metadata>175e7d78c3743210a770b92ed4013145</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Process Flow</sys_name>
+        <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
+        <sys_parent display_value="Registration">e4aa36c8c3703210a770b92ed4013185</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
+        <sys_scope_delete display_value="">7087e2208e764a1895bc39a715b8a590</sys_scope_delete>
+        <sys_update_name>sys_ui_formatter_175e7d78c3743210a770b92ed4013145</sys_update_name>
+        <sys_update_version display_value="sys_ui_formatter_175e7d78c3743210a770b92ed4013145">5b6e79b4c3743210a770b92ed4013126</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-22 16:56:50</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

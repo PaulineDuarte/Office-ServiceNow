@@ -3,7 +3,7 @@
         <canvas display_value="">483cff49c3783210a770b92ed40131ca</canvas>
         <component display_value="Vertical bar">23051643b7e03010097cb81cde11a910</component>
         <component_props>{"selectedElements":[],"configVersion":"23.0.0-ci-SNAPSHOT","chartVariation":"stacked","yAxisPosition":"bottom","yAxisShowGrid":true,"xAxisWrapLabels":false,"xAxisMaxLabelSize":100,"showClosestSeriesOnHover":true,"xAxisTruncationType":"end","yAxisStyle":"clean","showLegend":true,"showLegendValue":false,"legendPosition":"bottom","legendHorizontalAlignment":"center","legendExpandToFit":false,"showDataLabels":false,"dataLabelPosition":"middle","showStackedValues":"none","showOverlappingLabels":false,"colorConfig":{"type":"palette","palette":"eed2d719d7100200b96d45a3ce6103e9"},"yAxisHidden":false,"newReporting":false,"additionalGroupByConfig":[],"dataSources":[{"isDatabaseView":false,"allowRealTime":true,"label":"Registration","sourceType":"table","tableOrViewName":"x_1836079_office_registration","filterQuery":"state=2","preferredVisualizations":["d24d53f60350de7a652caf3188a46ed2"],"id":"dGFibGV4XzE4MzYwNzlfb2ZmaWNlX3JlZ2lzdHJhdGlvbjE3NjEzMTg3Mzk4MTg=","dataCategories":["trend","group","simple"]}],"showHeader":true,"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"hideMatrixAggregate":false,"wrapTitle":false,"showHeaderSeparator":true,"contextMenuActions":[],"headerTitle":" Grouping of participants pending approval by base manager","headingLevel":2,"showBorder":true,"bareBorder":false,"dataCategory":"group","telemetry":null,"showDataPassthrough":false,"showAdditionalGroupBySelector":false,"dataPassthrough":null,"metrics":[{"dataSource":"dGFibGV4XzE4MzYwNzlfb2ZmaWNlX3JlZ2lzdHJhdGlvbjE3NjEzMTg3Mzk4MTg=","id":"ZEdGaWJHVjRYekU0TXpZd056bGZiMlptYVdObFgzSmxaMmx6ZEhKaGRHbHZiakUzTmpFek1UZzNNems0TVRnPTE3NjEzMTg3NDE2OTY=","aggregateFunction":"COUNT","numberFormat":{"customFormat":false},"axisId":"primary"}],"groupBy":[{"groupBy":[{"dataSource":"dGFibGV4XzE4MzYwNzlfb2ZmaWNlX3JlZ2lzdHJhdGlvbjE3NjEzMTg3Mzk4MTg=","groupByField":"base.manager_base","isRange":false,"isChoice":false,"isPaBucket":false}],"maxNumberOfGroups":5,"numberOfGroupsBasedOn":"NO_OF_GROUP_BASED_ON_PER_METRIC","showOthers":false,"disableRanges":false}],"sortBy":"value","sortByOrder":"desc","trendBy":null,"showChange":false,"showChangePercentage":false,"showTarget":false,"showForecast":false,"showForecastRange":false,"showTrend":false,"showConfidenceBand":false,"showGapPercentage":false,"showSparkline":false,"showMetricLabel":false,"showThreshold":false,"showComment":false,"followFilters":true,"showFilterIcon":true,"enableRealTimeUpdate":false,"enableDrilldown":true,"enableClickAndStay":false,"showDataTable":false,"enableCustomEmptyState":false,"componentId":"erzne38e","emptyStateIllustration":"no-data","emptyStateHeading":"No data available.","emptyStateContent":"There are no scores available for the selected criteria. Contact your admin for more info.","emptyStateAlignment":"vertical-centered","refreshFrequency":null,"hideDevSettings":false,"configPropModifiers":{},"filterConfigurations":"@state.parFilters","showMaximumRange":false,"allowChangeDateRange":false,"showDateRangeByDefault":false,"applyDateRange":false,"numberOfPeriods":3,"showAbsolutePeriod":false,"scoreType":null,"showChangeFrom":"previous","period":"M","useDataCache":false,"cacheExpirationTime":0,"showCacheTime":true,"dateFormat":"default","showRefresh":true,"id":"headerTitle","value":" Grouping of participants pending approval by base manager","noDebounce":true,"propLabel":"Chart title"}</component_props>
-        <h>17</h>
+        <h>20</h>
         <name/>
         <stored_component/>
         <sys_class_name>par_dashboard_widget</sys_class_name>
@@ -12,7 +12,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6760c85dc3783210a770b92ed4013134</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package display_value="Office" source="x_1836079_office">3d08b2c4c3703210a770b92ed40131cc</sys_package>
@@ -20,11 +20,11 @@
         <sys_scope display_value="Office">3d08b2c4c3703210a770b92ed40131cc</sys_scope>
         <sys_update_name>par_dashboard_widget_6760c85dc3783210a770b92ed4013134</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-24 15:39:23</sys_updated_on>
+        <sys_updated_on>2025-10-24 18:58:23</sys_updated_on>
         <visualization/>
-        <w>18</w>
+        <w>26</w>
         <widget_props/>
-        <x>24</x>
+        <x>22</x>
         <y>0</y>
     </par_dashboard_widget>
 </record_update>
